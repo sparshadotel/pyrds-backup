@@ -11,7 +11,7 @@ except IOError:
 
 setuptools.setup(
     name="pyrdsbackup",
-    version="1.0.0-a",
+    version="1.0.1",
     author="Sparsha Dotel",
     author_email="sparshadotel@gmail.com",
     description="Simplify RDS Backups to S3",
@@ -26,7 +26,7 @@ setuptools.setup(
     ),
     keywords='cli',
     install_requires=(
-        'pymssql==2.1.3',
-        'pymssql'
+        'pyyaml',
+        'pyodbc==4.0.23'
     ),
 )

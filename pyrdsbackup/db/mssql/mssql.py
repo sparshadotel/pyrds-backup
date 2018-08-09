@@ -1,6 +1,6 @@
 import os
 import yaml
-import pymssql
+import pyodbc
 import time
 import datetime
 
@@ -10,9 +10,19 @@ def generate_rds_backup_path(db):
 def generate_native_backup_path(db):
     return '{}-{}.bak'.format(db, datetime.datetime.now().strftime("%I-%M-%B-%d-%Y"))
 
-def initialize_cursor(server, username, password):
-    conn = pymssql.connect(server, username, password, 'msdb')
-    conn.autocommit(True)
+def initialize_cursor(server, username, password, port, version):
+    ODBC_DRIVER = '{ODBC Driver %d for SQL Server}' %version
+    CONNECTION_STRING = 'DRIVER={driver};SERVER={server};PORT={port};DATABASE={database};UID={username};PWD={password}'
+    connection_str = CONNECTION_STRING.format(
+            driver=ODBC_DRIVER,
+            server=server,
+            database='msdb',
+            username=username,
+            password=password,
+            port=port
+        )
+    conn = pyodbc.connect(connection_str)
+    conn.autocommit = True
     return conn.cursor()
 
 def rds_backup_procedure_exists(cursor):
