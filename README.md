@@ -1,8 +1,12 @@
+<div align="center">
+    <img style="width: 128px;" src="assets/pyrdsbackup.svg">
+  </a>
+  <br/>
+
 # pyrdsbackup
-![alt-text] https://s3.amazonaws.com/uploads.hipchat.com/37040/4285749/RzneuatXXcUqGxo/drawing.svg_thumb.png
 
-
-###### A library on top of pyodbc meant to simplify backups of Databases from RDS to S3
+A library on top of pyodbc meant to simplify backups of Databases from RDS to S3
+</div>
 
 ### Installation
 ```
