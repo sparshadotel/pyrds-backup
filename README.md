@@ -1,5 +1,5 @@
 <div align="center">
-    <img style="width: 128px;" src="assets/pyrdsbackup.svg">
+    <img style="width: 8px;" src="assets/pyrdsbackup.png">
   </a>
   <br/>
 
