@@ -75,6 +75,7 @@ def start_native_backup(db, backup_location, backup_path, cursor):
         cursor.execute('''
             BACKUP DATABASE {} TO DISK='{}/{}';
         '''.format(db, backup_location, backup_path))
+        cursor.nextset() # Need this for persistence of local backup file.
 
     except Exception as e:
         print('Oops!!! Something went wrong.\n', e)
