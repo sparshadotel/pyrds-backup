@@ -20,14 +20,13 @@ setuptools.setup(
     url="https://github.com/darmagedon/pyrds-backup.git",
     packages=setuptools.find_packages(),
     classifiers=(
-        'Programming Language :: Python :: 2',
+        "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU Affero General Public License v3",
         "Operating System :: OS Independent",
     ),
     keywords='cli',
     install_requires=(
-        'pyyaml',
         'pyodbc==4.0.23'
     ),
 )
