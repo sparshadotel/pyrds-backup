@@ -1,21 +1,21 @@
 <div align="center">
-    <img style="width: 8px;" src="assets/pyrdsbackup.png">
-  </a>
-  <br/>
+    <img src="assets/pyrdsbackup.png">
 
 # pyrdsbackup
 
-A library on top of pyodbc meant to simplify backups of Databases from RDS to S3
+A library on top of pyodbc meant to simplify database backups from RDS to S3
 </div>
 
-### Installation
-```
+## Installation
+
+```bash
 sudo apt install -y unixodbc unixodbc-dev
 pip install pyrdsbackup
 ```
-### Usage
-#### MSSQL
-[Make sure that RDS Bakcup is enabled for your RDS instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.BackupRestore.html)
+
+## Usage
+
+[Make sure that RDS Bakcup is enabled for your RDS instance.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.BackupRestore.html)
 
 ```python
 from pyrds.backup import mssql
@@ -36,5 +36,3 @@ mssql.test(credentials)
 # Backup the database
 mssql.backup(credentials, 'database_name')
 ```
-
-
