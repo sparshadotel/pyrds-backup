@@ -18,7 +18,7 @@ pip install pyrdsbackup
 [Make sure that RDS Bakcup is enabled for your RDS instance.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.BackupRestore.html)
 
 ```python
-from pyrds.backup import mssql
+from pyrdsbackup.db import mssql
 
 # Initialize Credentials
 credentials = {
