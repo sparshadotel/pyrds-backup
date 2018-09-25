@@ -1,4 +1,3 @@
-from .db import test mssql
-name = 'hello'
+from .db import test, mssql
 test = test
 mssql = mssql
