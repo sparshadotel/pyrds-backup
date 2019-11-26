@@ -22,4 +22,4 @@ before_install:
   - sudo pip install awscli
 
 script:
-  - which aws
+  - echo $(which aws)
