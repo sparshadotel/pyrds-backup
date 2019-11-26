@@ -1,0 +1,25 @@
+--- 
+dist: bionic
+
+language: python
+
+python:
+  - 3.7
+
+addons:
+  apt:
+    packages:
+      - make
+      - curl
+      - python3-dev
+      - python3-pip
+      - python3-setuptools
+
+services:
+  - docker
+
+before_install:
+  - sudo pip install awscli
+
+script:
+  - which aws
