@@ -3,7 +3,7 @@
 
 # pyrdsbackup
 
-A library on top of pyodbc meant to simplify database backups from RDS to S3
+A library on top of pyodbc meant to simplify database backups from RDS to S3.
 </div>
 
 ## Installation
@@ -13,11 +13,13 @@ sudo apt install -y unixodbc unixodbc-dev
 pip install pyrdsbackup
 ```
 
+## Prerequisite
+
+[Make sure that RDS Backup is enabled for your RDS instance.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.BackupRestore.html)
+
 ## Usage
 
-[Make sure that RDS Bakcup is enabled for your RDS instance.](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.SQLServer.Options.BackupRestore.html)
-
-```python
+```py
 from pyrdsbackup.db import mssql
 
 # Initialize Credentials
@@ -30,7 +32,7 @@ credentials = {
     'driver_version': 17
 }
 
-# Test if the connection works. If returns True then backup is possible
+# Test if the connection works. If this statement returns True, backup is possible.
 mssql.test(credentials)
 
 # Backup the database
