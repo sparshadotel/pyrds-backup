@@ -27,6 +27,6 @@ setuptools.setup(
     ),
     keywords='cli',
     install_requires=(
-        'pyodbc==4.0.23'
+        'pyodbc==4.0.30'
     ),
 )
