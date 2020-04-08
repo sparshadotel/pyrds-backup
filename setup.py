@@ -11,7 +11,7 @@ except IOError:
 
 setuptools.setup(
     name="pyrdsbackup",
-    version="1.1.2",
+    version="1.1.3",
     author="Sparsha Dotel",
     author_email="sparshadotel@gmail.com",
     description="Simplify RDS Backups to S3",
